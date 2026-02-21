@@ -15,7 +15,7 @@ When presenting PRs, issues, or status updates to the user:
 - **Concise Table Format**: Prefer a clean Markdown table.
 - **Prioritization & Sorting**: Always sort PRs to emphasize those that need attention first. Use the following priority order (highest to lowest): `approved + passing` > `action required` > `open` > `draft` > `closed` / `merged`.
 - **Status Emojis**: Use the following mapping in the left-most column to indicate status:
-  - 📝 -- `draft`
+  - 📝 -- `draft` (Always use this for drafts, regardless of checks, comments, or other conditions)
   - ⏳ -- `checks are not yet done`
   - ‼️ -- `action required` / `changes requested` / `checks or ci failing`
   - ✅ -- `approved` / `ci passing`
