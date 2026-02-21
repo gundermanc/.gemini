@@ -27,7 +27,7 @@ When presenting PRs, issues, or status updates to the user:
 ### 1. Pull Request Lifecycle
 When working on a PR, follow these steps:
 - **Creation**: Use `gh pr create --fill` to create a PR from your current branch. Use `--draft` if the work is still in progress.
-- **Monitoring**: Use `gh pr status` to see a summary of your PRs and `gh pr checks` to see the results of CI/CD pipelines.
+- **Monitoring**: Use `gh pr status` to see a summary of your PRs and `gh pr checks` to see the results of CI/CD pipelines. When querying PRs directly (e.g. `gh pr list`), prioritize PRs that have changed recently or are open.
 - **Reviewing**: Use `gh pr review` to respond to feedback. Use `--approve` to approve or `--comment` with `--body` to add general feedback.
 - **Reviews Requested**: Use `gh pr list --search "review-requested:@me"` to identify PRs that need your attention.
 
@@ -47,6 +47,6 @@ For a comprehensive list of commands and flags, see [references/gh-commands.md](
 ## Usage Guidelines
 
 - **Context Awareness**: Always check if you are in a git repository before running `gh` commands that require one.
-- **Truncation**: `gh` outputs can be long. When listing items, focus on the most relevant entries or use `--limit`.
+- **Truncation and Filtering**: `gh` outputs can be very long. When listing items (e.g., `gh pr list`), use sufficient filters to narrow down to just relevant results so you don't miss anything before the output limit is reached. For example, prioritize items that have changed recently (e.g., using `--search "sort:updated-desc"`) or are open (`--state open`). Always prefer targeted queries over broad ones.
 - **Formatting**: Use `--json` flags if you need to process data programmatically, but default to human-readable output for immediate feedback.
 - **Drafts**: Encourage the use of draft PRs for work-in-progress to avoid triggering unnecessary notifications or CI runs prematurely.
