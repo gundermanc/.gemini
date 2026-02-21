@@ -9,6 +9,19 @@ description: Provides instructions and workflows for using the GitHub CLI (gh) t
 
 This skill enables efficient use of the GitHub CLI (`gh`) for common development workflows. It focuses on PR management, issue tracking, and status monitoring.
 
+## Reporting & Formatting
+
+When presenting PRs, issues, or status updates to the user:
+- **Concise Table Format**: Prefer a clean Markdown table.
+- **Status Emojis**: Use the following mapping in the left-most column to indicate status:
+  - ⏳ -- `in progress` / `draft`
+  - ‼️ -- `action required` / `changes requested` / `ci failing`
+  - ✅ -- `approved` / `ci passing`
+  - 🚀 -- `open` / `ready for review`
+  - 💤 -- `idle` / `stale`
+  - ☑️ -- `merged` / `closed`
+  - ❌ -- `fail`
+
 ## Common Workflows
 
 ### 1. Pull Request Lifecycle
