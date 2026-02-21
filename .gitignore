@@ -137,3 +137,10 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Ignore everything in the top level directory except settings.json, agents/, and skills/
+/*
+!settings.json
+!.gitignore
+!agents/
+!skills/
